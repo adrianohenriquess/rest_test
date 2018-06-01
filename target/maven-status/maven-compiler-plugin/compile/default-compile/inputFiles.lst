@@ -1,0 +1,10 @@
+/opt/workspace/oxigen/rest_test/src/main/java/com/example/rest_test/rest/MemberResourceRESTService.java
+/opt/workspace/oxigen/rest_test/src/main/java/com/example/rest_test/rest/GreetingResource.java
+/opt/workspace/oxigen/rest_test/src/main/java/com/example/rest_test/data/MemberRepository.java
+/opt/workspace/oxigen/rest_test/src/main/java/com/example/rest_test/data/MemberListProducer.java
+/opt/workspace/oxigen/rest_test/src/main/java/com/example/rest_test/controller/MemberController.java
+/opt/workspace/oxigen/rest_test/src/main/java/com/example/rest_test/service/MemberRegistration.java
+/opt/workspace/oxigen/rest_test/src/main/java/com/example/rest_test/rest/JaxRsActivator.java
+/opt/workspace/oxigen/rest_test/src/main/java/com/example/rest_test/util/Resources.java
+/opt/workspace/oxigen/rest_test/src/main/java/com/example/rest_test/rest/HelloResource.java
+/opt/workspace/oxigen/rest_test/src/main/java/com/example/rest_test/model/Member.java

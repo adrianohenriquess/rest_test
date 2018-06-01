@@ -1,0 +1,11 @@
+com/example/rest_test/controller/MemberController.class
+com/example/rest_test/data/MemberRepository.class
+com/example/rest_test/rest/HelloResource.class
+com/example/rest_test/rest/JaxRsActivator.class
+com/example/rest_test/service/MemberRegistration.class
+com/example/rest_test/rest/GreetingResource.class
+com/example/rest_test/model/Member_.class
+com/example/rest_test/util/Resources.class
+com/example/rest_test/rest/MemberResourceRESTService.class
+com/example/rest_test/data/MemberListProducer.class
+com/example/rest_test/model/Member.class
