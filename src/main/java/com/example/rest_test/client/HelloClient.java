@@ -20,7 +20,8 @@ public class HelloClient {
 	}
 
 	public String sayHello(String message) {
-		Invocation webServiceCall = webTarget.request().accept("text/plain").build("PUT", Entity.text(message));
+		Invocation webServiceCall = webTarget.request().accept("text/plain")
+												.build("PUT", Entity.text(message));
 		return webServiceCall.invoke(String.class);
 	}
 }
