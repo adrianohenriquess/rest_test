@@ -1,59 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Web Socket Clock</title>
-<script language="javascript" type="text/javascript">
-			var websocket;
-			var last_time;
-			function init() {
-				output = document.getElementById("output");
-			}
+<meta charset="utf-8" />
+<title id="titleID">Chat Client</title>
 
-			function start_clock() {
-				var wsUri = "ws://localhost:8080/clock-app/clock";
-				websocket = new WebSocket(wsUri);
-				websocket.onmessage = function (evt) {
-					last_time = evt.data;
-					writeToScreen("<span style='color: blue;'>" + last_time + "</span>");
-				};
-				websocket.onerror = function (evt) {
-					writeToScreen('<span style="color: red;">ERROR:</span> ' + evt.data);
-					websocket.close();
-				};
-			}
+<script type="text/javascript" src="chat_script.js"></script>
 
-			function stop_clock() {
-				websocket.send("stop");
-			}
-			
-			function writeToScreen(message) {
-				var pre = document.createElement("p");
-				pre.style.wordWrap = "break-word";
-				pre.innerHTML = message;
-				oldChild = output.firstChild;
-				if ( oldChild == null) {
-					output.appendChild(pre);
-				} else {
-					output.removeChild(oldChild);
-					output.appendChild(pre);
-				}
-			}
+<h2 style="text-align: center;">Chat Client</h2>
+<br></br>
 
-			window.addEventListener("load", init, false);
-	</script>
-</head>
-<body>
-	<div style="text-align: center; font-family: Arial; font-size: large">
-		WebSocket Clock <br></br>
-		<form action="">
-			<input onclick="start_clock()"
-				title="Press to start the clock on the server" value="Start" type="button"/> 
-			<input onclick="stop_clock()" title="Press to stop the clock on the server" value="Stop"
-				type="button" />
-		</form>
-		<div id="output">
-		</div>
-	</div>
-</body>
+<table style="text-align: center; " cellpadding="5" cellspacing="0" >
+    <tbody>
+        <tr>
+            <td style=" vertical-align: top;" >
+                <textarea id="transcriptID" rows="10" cols="50" readonly="readonly"></textarea>
+                <br>
+            </td>
+            <td style="vertical-align: top;">
+                <textarea id="userListID" rows="10" cols="15" readonly="readonly"></textarea>
+                <br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table style=" text-align: center; " cellpadding="5"
+       cellspacing="0" >
+    <tbody>
+        <tr>
+            <td style=" vertical-align: top;">
+                <form action="">
+                    <input id="chatMessageTextID" size="70" name="chattext" value="Hi there !" type="text"><br>
+                </form>
+
+                <br>
+            </td>
+            <td style="vertical-align: top;">
+                <table style=" text-align: left; " cellpadding="0"
+                       cellspacing="2">
+                    <tr>
+                        <td style=" vertical-align: top;">
+                            <form action=""><input type="button" id="SendButtonID" onclick="button_sendMessage()"
+                                                   value="Send"></form>
+                        </td>
+                        <td style=" vertical-align: top;">
+                            <form action=""><input type="button" id="SignInButtonID" onclick="button_signInOut()"
+                                                   value="Sign in"></form>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
 </html>
