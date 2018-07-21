@@ -5,7 +5,7 @@ import java.util.*;
 import javax.websocket.*;
 import javax.websocket.server.*;
 
-@ServerEndpoint(value = "/chat-server",
+@ServerEndpoint(value = "/chat-server1",
         subprotocols={"chat"},
         decoders = {ChatDecoder.class},
         encoders = {ChatEncoder.class})
